@@ -1,0 +1,203 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel">
+			<div class="panel-heading">
+			</div>
+			<div class="panel-body">
+				<div class="pad-btm form-inline">
+					<div class="row">
+						<div class="col-sm-12 table-toolbar-right">
+							<a class="cursor-pointer" (click)="clear()">
+								<button class="btn btn">Limpar Modelo</button>
+							</a>
+							<button class="btn btn-primary" [disabled]="allColumns.length == 0 || form.invalid" (click)="gerarDataWareHouse()">Gerar</button>
+
+						</div>
+					</div>
+				</div>
+				<div class='row'>
+					<form [formGroup]='form'  novalidate>
+						<div class='form-group is-empty col-lg-4'>
+							<app-input-container>
+								<label for="">Nome</label>
+								<input class='form-control' formControlName="no_data_warehouse">
+							</app-input-container>
+						</div>
+						<div class='form-group is-empty col-lg-8'>
+							<app-input-container>
+								<label for="">Descrição</label>
+								<input class='form-control' formControlName="ds_data_warehouse">
+							</app-input-container>
+						</div>
+					</form>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="row">
+							<div class="col-sm-12 table-aviso text-center">
+								Click para selecionar a tabela!
+							</div>
+						</div>
+						<div class="table-tabelas">
+							<table>
+								<thead>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line text-center" colspan="2">TABELAS</th>
+									</tr>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line">Nome</th>
+										<th class="td-line">FK/PK</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let table of tables" class="tr-line" [class.row-select]="table.select" (click)="selecionarTabela(table)">
+										<td class="td-line">{{table.name}}</td>
+										<td class="td-line">{{table.fk == table.name ? 'PK' : table.fk}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-sm-4" *ngIf="columns.length > 0">
+						<div class="row">
+							<div class="col-sm-12 table-aviso text-center">
+								dê dois cliques para adicionar a caluna!
+							</div>
+						</div>
+						<div class="table-tabelas">
+							<table>
+								<thead>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line text-center" colspan="2">COLUNAS</th>
+									</tr>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line">Nome</th>
+										<th class="td-line">Tipo</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let column of columns" class="tr-line" [class.row-select]="column.select" (dblclick)="selectColumn(column)">
+										<td class="td-line">{{column.field}}</td>
+										<td class="td-line">{{column.type}} {{column.key}}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="col-sm-4" *ngIf="allColumns.length > 0">
+						<div class="row">
+							<div class="col-sm-12 table-aviso text-center">
+								Essas são as colunas do DW
+							</div>
+						</div>
+						<div class="table-tabelas" >
+							<table>
+								<thead>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line text-center" colspan="3">RESULTADO</th>
+									</tr>
+									<tr role="row" class="tr-color" class="tr-line">
+										<th class="td-line">Colunas</th>
+										<th class="td-line">Tipo</th>
+										<th class="td-line">Ações</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr *ngFor="let column of allColumns" class="tr-line">
+										<td class="td-line">{{column.field}}</td>
+										<td class="td-line">{{column.type}} {{column.key}}</td>
+										<td class="td-line td-acoes">
+											<i class="pli-remove cursor-pointer icon-remove" (click)="removeColumn(column)" ></i>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<input type="hidden" data-target="#sm-modal_colunas" data-toggle="modal" #openModalColumns>
+<!--============== Small Bootstrap Modal =====================================-->
+<div id="sm-modal_tabelas" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" #closeBtnTable><i
+						class="pci-cross pci-circle"></i></button>
+				<h4 class="modal-title" id="mySmallModalLabel">Selecionar tabelas</h4>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-md-12'>
+							<div class='form-group is-empty col-md-3' style="cursor:pointer" *ngFor="let table of tables">
+								<div class='col-md-12'  [class.selectTable]="table.select && table.fk_select" [class.fkTable]="table.fk_select && !table.select" [class.selectTable]="table.select" (click)="selectTabela(table)">
+									<p class="itens">{{table.name}}</p>
+								</div>
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal"
+					type="button">Fechar</button>
+				<button class='btn btn-primary'>Importar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End Small Bootstrap Modal-->
+
+<!--============== Small Bootstrap Modal =====================================-->
+<div id="sm-modal_colunas" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" #closeBtnColumns><i
+						class="pci-cross pci-circle"></i></button>
+				<h4 class="modal-title" id="mySmallModalLabel">Selecionar Colunas</h4>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='form-group col-md-3' style="cursor:pointer" *ngFor="let col of columns">
+							<div class='col-md-12' [ngClass]="{'selectTable': col.select}"  (click)="selecionarColumns(col)">
+								<p class="itens">
+									{{col.field}}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-default" data-dismiss="modal"
+					type="button">Fechar</button>
+				<button class='btn btn-primary' (click)="selectColumns()">Selecionar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End Small Bootstrap Modal-->
+
+<!--============== Small Bootstrap Modal =====================================-->
+<div id="sm-modal_formapagamento_notice" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i class="pci-cross pci-circle"></i></button>
+				<h4 class="modal-title" id="mySmallModalLabel">Alterar Valores</h4>
+			</div>
+			<div class="modal-body">
+				<p>Os dados são alterados na própria tabela.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--===================================================-->
+<!--End Small Bootstrap Modal-->

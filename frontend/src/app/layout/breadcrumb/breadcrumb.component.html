@@ -1,0 +1,10 @@
+<div id="page-head" class="no-print" *ngIf="pagina.length">
+	<div id="page-title">
+		<h1 class="page-header text-overflow">{{pagina[0]?.no_rotina}}</h1>
+	</div>
+	<ol class="breadcrumb">
+		<li [routerLink]="['/']"><a><i class="pli-home cursor-pointer"></i></a></li>
+		<li [routerLink]="['/']" *ngIf="pagina[0]?.no_rotina != 'Início'" class="cursor-pointer"><a>Início</a></li>
+		<li *ngFor="let pg of pagina" [routerLink]="['/'+pg?.ds_url]" class="{{pg?.active}} cursor-pointer">{{pg?.no_rotina}}</li>
+	</ol>
+</div>

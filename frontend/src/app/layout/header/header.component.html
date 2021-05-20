@@ -1,0 +1,280 @@
+
+<!--NAVBAR-->
+<header id="navbar">
+    <div id="navbar-container" class="boxed">
+        <!--Brand logo & name-->
+        <div class="navbar-header">
+            <a [routerLink]="['/data-warehouse']" class="navbar-brand">
+                <img src="./../../../assets/img/system/horse-logo-white copy.svg" alt="Reflex Logo" class="brand-icon" width="20px">
+                <div class="brand-title">
+                    <span class="logo">REFLEX</span>
+                </div>
+            </a>
+        </div>
+        <!--End brand logo & name-->
+        <!--Navbar Dropdown-->
+        <div class="navbar-content">
+            <ul class="nav navbar-top-links">
+                <!--Navigation toogle button-->
+                <li class="tgl-menu-btn" id="tgl-menu-btn_pdv">
+                </li>
+                <!--End Navigation toogle button-->
+            </ul>
+            <ul class="nav navbar-top-links">
+                <li>
+                    <a [routerLink]="['/']" id="outPdv" ></a>
+                </li>
+                <!--Mega dropdown-->
+                <li class="mega-dropdown">
+                    <div class="dropdown-menu mega-dropdown-menu">
+                        <div class="row">
+                            <div class="col-sm-4 col-md-3">
+                                <!--Mega menu list-->
+                                <ul class="list-unstyled">
+                <li class="dropdown-header"><i class="pli-file icon-lg icon-fw"></i> Pages</li>
+                <li><a [routerLink]="['/perfil']">Profile</a></li>
+                <li><a href="#">Search Result</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Sreen Lock</a></li>
+                <li><a href="#">Maintenance</a></li>
+                <li><a href="#">Invoice</a></li>
+                <li><a href="#" class="disabled">Disabled</a></li>                                        </ul>
+                            </div>
+                            <div class="col-sm-4 col-md-3">
+                                <!--Mega menu list-->
+                                <ul class="list-unstyled">
+                <li class="dropdown-header"><i class="pli-mail icon-lg icon-fw"></i> Mailbox</li>
+                <li><a href="#"><span class="pull-right label label-danger">Hot</span>Indox</a></li>
+                <li><a href="#">Read Message</a></li>
+                <li><a href="#">Compose</a></li>
+                <li><a href="#">Template</a></li>
+                                </ul>
+                                <p class="pad-top text-main text-sm text-uppercase text-bold"><i class="icon-lg pli-calendar-4 icon-fw"></i>News</p>
+                                <p class="pad-top mar-top bord-top text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p>
+                            </div>
+                            <div class="col-sm-4 col-md-3">
+                                <!--Mega menu list-->
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#" class="media mar-btm">
+                                            <span class="badge badge-success pull-right">90%</span>
+                                            <div class="media-left">
+                                                <i class="pli-data-settings icon-2x"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text-semibold text-main mar-no">Data Backup</p>
+                                                <small class="text-muted">This is the item description</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media mar-btm">
+                                            <div class="media-left">
+                                                <i class="pli-support icon-2x"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text-semibold text-main mar-no">Support</p>
+                                                <small class="text-muted">This is the item description</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media mar-btm">
+                                            <div class="media-left">
+                                                <i class="pli-computer-secure icon-2x"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text-semibold text-main mar-no">Security</p>
+                                                <small class="text-muted">This is the item description</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="media mar-btm">
+                                            <div class="media-left">
+                                                <i class="pli-map-2 icon-2x"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text-semibold text-main mar-no">Location</p>
+                                                <small class="text-muted">This is the item description</small>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-12 col-md-3">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--End mega dropdown-->
+                <li class="dropdown">
+                <a href="#" data-target="#sm-modal_confDatabaseHost" data-toggle="modal" class="cursor-pointer" (click)="getConfigHost()" *ngIf="exibirConf">
+                    Host
+                    <span *ngIf="temBoleto" class="badge badge-header badge-danger"></span>
+                </a>
+                <a href="#" data-target="#sm-modal_confDatabaseServe" data-toggle="modal" class="cursor-pointer" (click)="getConfigServe()" *ngIf="exibirConf">
+                    Serve
+                    <span *ngIf="temBoleto" class="badge badge-header badge-danger"></span>
+                </a>
+                    <div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
+                        <div class="nano scrollable dbConf" >
+                            <div class="nano-content dbConf">
+                                <ul class="head-list dbConf">
+                                    <li > 
+                                        <div class="text-center"> </div>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--User dropdown-->
+                <li id="dropdown-user" class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle text-right">
+                        <span class="ic-user pull-right">
+                            <i class="pli-male"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right panel-default">
+                        <ul class="head-list">
+                            <li>
+                                <a (click)="logout()" ><i class="pli-unlock icon-lg icon-fw"></i> Sair</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!--End user dropdown-->
+                <li>
+                    <a href="#" class="aside-toggle">
+                        <i class="pli-dot-vertical"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--End Navbar Dropdown-->
+    </div>
+</header>
+<!--END NAVBAR-->
+<!--============== Small Bootstrap Modal =====================================-->
+<div id="sm-modal_confDatabaseHost" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i
+						class="pci-cross pci-circle"></i></button>
+				<h4 class="modal-title" id="mySmallModalLabel">Configuração do Banco de dados</h4>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-md-12'>
+                        <form [formGroup]='formHost' novalidate>
+                            <div class='form-group is-empty col-md-4'>
+                                <label class="control-label" for='id_tipo_forma_pagamento'>driver </label>
+                                <ng-select [items]="drivers"  bindLabel="name" bindValue="driver" formControlName='driver'> </ng-select>
+                            </div>
+                            <div class='form-group is-empty col-md-4' >
+                                <app-input-container errorMessage='Obrigatório (Apenas numeros)'label='Banco de dados'>
+                                    <input  class='form-control' formControlName='no_database' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='host'>
+                                    <input class='form-control' formControlName='host' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='port'>
+                                    <input class='form-control' formControlName='port' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='Usuário'>
+                                    <input class='form-control' formControlName='usuario' placeholder=''>
+                                </app-input-container>
+                            </div>
+
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='password'>
+                                    <input class='form-control' formControlName='password' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='charset'>
+                                    <input class='form-control' formControlName='charset' placeholder=''>
+                                </app-input-container>
+                            </div>
+                        </form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button data-dismiss="modal" class="btn btn-default" data-dismiss="modal"
+					type="button">Close</button>
+				<button (click)='updateConfig(formHost.value)' [disabled]='!formHost.valid' class='btn btn-primary' data-dismiss="modal">Salvar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End Small Bootstrap Modal-->
+<!--============== Small Bootstrap Modal =====================================-->
+<div id="sm-modal_confDatabaseServe" class="modal fade" tabindex="-1">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><i
+						class="pci-cross pci-circle"></i></button>
+				<h4 class="modal-title" id="mySmallModalLabel">Configuração do Banco de dados</h4>
+			</div>
+			<div class="modal-body">
+				<div class='row'>
+					<div class='col-md-12'>
+                        <form [formGroup]='formServe' novalidate>
+                            <div class='form-group is-empty col-md-4'>
+                                <label class="control-label" for='id_tipo_forma_pagamento'>driver </label>
+                                <ng-select [items]="drivers"  bindLabel="name" bindValue="driver" formControlName='driver'> </ng-select>
+                            </div>
+                            <div class='form-group is-empty col-md-4' >
+                                <app-input-container errorMessage='Obrigatório (Apenas numeros)'label='Banco de dados'>
+                                    <input  class='form-control' formControlName='no_database' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='host'>
+                                    <input class='form-control' formControlName='host' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='port'>
+                                    <input class='form-control' formControlName='port' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='Usuário'>
+                                    <input class='form-control' formControlName='usuario' placeholder=''>
+                                </app-input-container>
+                            </div>
+
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='password'>
+                                    <input class='form-control' formControlName='password' placeholder=''>
+                                </app-input-container>
+                            </div>
+                            <div class='form-group is-empty col-md-4'>
+                                <app-input-container errorMessage='Campo obrigatório' label='charset'>
+                                    <input class='form-control' formControlName='charset' placeholder=''>
+                                </app-input-container>
+                            </div>
+                        </form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button data-dismiss="modal" class="btn btn-default" data-dismiss="modal"
+					type="button">Close</button>
+				<button (click)='updateConfig(formServe.value)' [disabled]='!formServe.valid' class='btn btn-primary' data-dismiss="modal">Salvar</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End Small Bootstrap Modal-->

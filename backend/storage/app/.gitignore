@@ -1,0 +1,5 @@
+*
+!public/
+!.gitignore
+!json/*.json
+!json/

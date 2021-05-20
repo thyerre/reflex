@@ -1,0 +1,156 @@
+{
+   "dados":{
+      "pais":[
+         {
+            "no_categoria":"Despesas operacionais",
+            "filhas":[
+               {
+                  "no_categoria":"\u00c1gua",
+                  "nu_ordem":1
+               },
+               {
+                  "no_categoria":"Aluguel",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"Condom\u00ednio",
+                  "nu_ordem":3
+               },
+               {
+                  "no_categoria":"FGTS",
+                  "nu_ordem":4
+               },
+               {
+                  "no_categoria":"INSS",
+                  "nu_ordem":5
+               },
+               {
+                  "no_categoria":"Luz",
+                  "nu_ordem":6
+               },
+               {
+                  "no_categoria":"Material de consumo",
+                  "nu_ordem":7
+               },
+               {
+                  "no_categoria":"Material de escrit\u00f3rio",
+                  "nu_ordem":8
+               },
+               {
+                  "no_categoria":"Sal\u00e1rio",
+                  "nu_ordem":9
+               },
+               {
+                  "no_categoria":"Outras despesas",
+                  "nu_ordem":10
+               }
+            ]
+         },
+         {
+            "no_categoria":"Despesas de vendas",
+            "filhas":[
+               {
+                  "no_categoria":"Comiss\u00f5es",
+                  "nu_ordem":1                  
+               },
+               {
+                  "no_categoria":"Embalagens",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"Fretes",
+                  "nu_ordem":3
+               },
+               {
+                  "no_categoria":"Outras despesas",
+                  "nu_ordem":4
+               }
+            ]
+         },
+         {
+            "no_categoria":"Impostos",
+            "filhas":[
+               {
+                  "no_categoria":"IPI",
+                  "nu_ordem":1
+               },
+               {
+                  "no_categoria":"ICMS",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"ISSQN",
+                  "nu_ordem":3
+               },
+               {
+                  "no_categoria":"SIMPLES",
+                  "nu_ordem":4
+               },
+               {
+                  "no_categoria":"Outro imposto",
+                  "nu_ordem":5
+               }
+            ]
+         },
+         {
+            "no_categoria":"Despesas diversas",
+            "filhas":[
+               {
+                  "no_categoria":"Tarifas banc\u00e1rias",
+                  "nu_ordem":1
+               },
+               {
+                  "no_categoria":"Juros e multas",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"Outras despesas",
+                  "nu_ordem":3
+               }
+            ]
+         },
+         {
+            "no_categoria":"Investimentos",
+            "filhas":[
+               {
+                  "no_categoria":"Autom\u00f3vel",
+                  "nu_ordem":1
+               },
+               {
+                  "no_categoria":"Computador",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"M\u00f3veis",
+                  "nu_ordem":3
+               },
+               {
+                  "no_categoria":"Outros investimentos",
+                  "nu_ordem":4
+               }
+            ]
+         },
+         {
+            "no_categoria":"Compras (estoque)",
+            "filhas":[
+               {
+                  "no_categoria":"Compras (estoque)",
+                  "nu_ordem":1
+               },
+               {
+                  "no_categoria":"Frete fora da nota",
+                  "nu_ordem":2
+               },
+               {
+                  "no_categoria":"ICMS ST fora da nota",
+                  "nu_ordem":3
+               },
+               {
+                  "no_categoria":"Despesas fora da nota",
+                  "nu_ordem":4
+               }
+            ]
+         }
+      ]
+   }
+}

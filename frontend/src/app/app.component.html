@@ -1,0 +1,27 @@
+<div id="container" [className]="mostrarMenu ? 'effect aside-float aside-bright mainnav-lg' : 'cls-container'" class="">
+	
+	<app-header *ngIf=(mostrarMenu)></app-header>
+	<div class="boxed">
+		<div  [id]="mostrarMenu? 'content-container':'content-container-login'"  class="aasdfasdfasdfasdf">
+			<app-breadcrumb *ngIf=(mostrarMenu)></app-breadcrumb>
+			
+			<div [id]="mostrarMenu?'page-content':''">
+
+				<hr class="new-section-sm bord-no no-print">
+				<div class="panel panel-body "  id="controlpanelbody">
+					<router-outlet></router-outlet>
+				</div>
+			</div>
+		</div>
+
+		<app-config *ngIf=(mostrarMenu)></app-config>
+		<app-menu *ngIf=(mostrarMenu)></app-menu>
+	</div>
+	<app-footer *ngIf=(mostrarMenu)></app-footer>
+	<!-- SCROLL PAGE BUTTON -->
+	<button class="scroll-top btn">
+		<i class="pci-chevron chevron-up"></i>
+	</button>
+</div>
+
+<app-snackbar></app-snackbar>

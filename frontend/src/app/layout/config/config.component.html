@@ -1,0 +1,45 @@
+<!--ASIDE-->
+            <!--===================================================-->
+            <aside id="aside-container">
+                <div id="aside">
+                    <div class="nano">
+                        <div class="nano-content">
+                            <!--Nav tabs-->
+                            <!--================================-->
+                            <ul class="nav nav-tabs nav-justified">
+                                <li class="active">
+                                    <a href="#asd-tab-1" data-toggle="tab">
+                                        <i class="pli-wrench icon-lg icon-fw"></i> Configurações
+                                    </a>
+                                </li>
+                            </ul>
+                            <!--================================-->
+                            <!--End nav tabs-->
+                            <!-- Tabs Content -->
+                            <!--================================-->
+                            <div class="tab-content">
+                                <!--First tab (Contact list)-->
+                                <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+                                <div class="tab-pane fade in active" id="asd-tab-1">
+                                    <ul class="list-group bg-trans">
+                                        <li class="pad-top list-header">
+                                            <p class="text-main text-sm text-uppercase text-bold mar-no">Configurações</p>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="pull-right">                                                
+                                                <input class="toggle-switch" id="switch-1" type="checkbox" checked [(ngModel)]="darkmode" #ctrl="ngModel" (change)="setDarkMode()">
+                                                <label for="switch-1"></label>
+                                            </div>
+                                            <p class="mar-no text-main">Modo Dark</p>
+                                            <small class="text-muted">Ativar tema escuro.</small>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!--===================================================-->
+            <!--END ASIDE-->

@@ -1,0 +1,35 @@
+/*CSS para impressão*/
+@media print {
+
+    header,
+    nav,
+    footer,
+    video,
+    audio,
+    object,
+    embed,
+    #navbar {
+        display: none!important;
+    }
+
+    .no-print {
+        display: none!important;
+    }
+    #page-content{
+        margin: 0px!important;padding: 0px!important;
+    }
+
+    /* Quebras de página */
+    .page-break {
+        page-break-before: always;
+    }
+    #content-container {
+        padding-top: 0px!important;
+    }
+    #container.mainnav-lg #footer, #container.mainnav-lg #content-container {
+        padding-left:0px!important;
+    }
+    
+    /* #controlpanelbody{padding: 15px 20px 0px!important}; */
+    /* #content-container{padding-left: 0px!important}; */
+}

@@ -1,0 +1,64 @@
+.selectTable{
+    background-color: #3c8688;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+.fkTable{
+    background-color: #324c8c;
+    border-radius: 10px;
+    display: flex;
+    flex:1;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.modal-dialog {
+    margin-top: 20px;
+}
+
+.itens {
+    margin:0;
+    padding: 3px;
+}
+
+
+/* ################################################################### */
+.tr-line {
+    border: 1px solid rgba(116, 116, 116, 0.466);
+}
+.td-line {
+    padding: 10px;
+    border: 1px solid rgba(116, 116, 116, 0.486);
+}
+.table-tabelas {
+    /* width: 100%; */
+    max-height: 500px;
+    overflow: auto;
+}
+.table-tabelas table {
+    width: 100%;
+}
+.row-select {
+    background-color: #25476a;
+    /* background-color: teal; */
+    color: white;
+}
+.td-acoes {
+    width: 40px;
+}
+
+.icon-remove {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.table-aviso {
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+    background-color: rgba(243, 233, 146, 0.384);
+}

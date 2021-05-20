@@ -1,0 +1,40 @@
+@media (min-width: 1000px) and (max-width: 1024px) {
+	.modal-xlg {
+		width: 90%; 
+	 }
+ }
+ @media (min-width: 1025px) and (max-width: 1152px) {
+	.modal-xlg {
+		width: 90%; 
+	 }
+ }
+ @media (min-width: 1153px) and (max-width: 1280px) {
+	.modal-xlg {
+		width: 85%; 
+	 }
+ }
+ @media (min-width: 1281px) and (max-width: 1366px) {
+	.modal-xlg {
+		width: 80%; 
+	 }
+ }
+ @media (min-width: 1367px) and (max-width: 1440px) {
+	.modal-xlg {
+		width: 75%; 
+	 }
+ }
+ @media (min-width: 1449px) and (max-width: 1600px) {
+	.modal-xlg {
+		width: 70%; 
+	 }
+ }
+ @media (min-width: 1601px) and (max-width: 1680px) {
+	.modal-xlg {
+		width: 70%; 
+	 }
+ }
+ @media (min-width: 1681px) and (max-width: 1920px) {
+	.modal-xlg {
+		width: 70%; 
+	 }
+ }

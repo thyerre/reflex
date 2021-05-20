@@ -1,0 +1,25 @@
+.intro {
+    top: -20px;
+    width: 100%;
+    height: 90vh;
+}
+.card {
+    border: 1px solid rgb(133, 133, 133);
+    padding: 20px;
+}
+
+.container-left {
+    float:left;
+    width: 250px;
+}
+.container-left img {
+    margin-bottom: 150px;
+}
+
+.container-rigth img {
+    margin-bottom: 150px;
+}
+.container-rigth {
+    float: right;
+    width: 250px;
+}

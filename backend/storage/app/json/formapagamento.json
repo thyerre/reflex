@@ -1,0 +1,94 @@
+{
+    "formapagamento": [
+        {
+            "id": "",
+            "no_forma_pagamento": "Outros",
+            "no_forma_pagamento_na_nfce":"Outros",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 10,
+            "porcento_taxa": "" 
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Cartão de Crédito",
+            "no_forma_pagamento_na_nfce":"Cartão de Crédito",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 3,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Cartão de Débito",
+            "no_forma_pagamento_na_nfce":"Cartão de Débito",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 4,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Dinheiro",
+            "no_forma_pagamento_na_nfce":"Dinheiro",
+            "bo_ativo": "false",
+            "qt_dia_receber": "0",
+            "id_tipo_forma_pagamento": 1,
+            "porcento_taxa": "0"
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Cheque",
+            "no_forma_pagamento_na_nfce":"Cheque",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 2,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Vale Presente",
+            "no_forma_pagamento_na_nfce":"Vale Presente",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 8,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Vale Combustível",
+            "no_forma_pagamento_na_nfce":"Vale Combustível",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 9,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Vale Refeição",
+            "no_forma_pagamento_na_nfce":"Vale Refeição",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 7,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Vale Alimentação",
+            "no_forma_pagamento_na_nfce":"Vale Alimentação",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 6,
+            "porcento_taxa": ""
+        },
+        {
+            "id": "",
+            "no_forma_pagamento": "Crédito loja",
+            "no_forma_pagamento_na_nfce":"Crédito Loja",
+            "bo_ativo": "false",
+            "qt_dia_receber": "1",
+            "id_tipo_forma_pagamento": 5,
+            "porcento_taxa": ""
+        }
+    ]
+}

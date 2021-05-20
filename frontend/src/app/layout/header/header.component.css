@@ -1,0 +1,11 @@
+.brand-icon{
+    margin-left: 50px !important;
+    padding: 8px;
+}
+.dbConf{
+    width: 800px !important ;
+    height: 500px !important;
+}
+.logo, .brand-icon{
+    color: white;
+}

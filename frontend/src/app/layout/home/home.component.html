@@ -1,0 +1,314 @@
+
+<div class="row" *ngIf="!load">
+	<div class="col-md-3">
+		<div class="panel panel-info panel-colorful media middle pad-all">
+			<div class="media-left">
+				<div class="pad-hor">
+					<i class="pli-cart-coin icon-3x"></i>
+				</div>
+			</div>
+			<div class="media-body">
+				<!-- <p class="text-2x mar-no text-semibold">{{totalVendasPorDia?.total}}</p> -->
+				<p class="mar-no">Relatórios</p>
+				<!-- <p class="text-1-4x mar-no text-semibold text-right">{{totalVendasPorDia?.valor_total  | currency:'BRL'}}
+				</p> -->
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-mint panel-colorful media middle pad-all">
+			<div class="media-left">
+				<div class="pad-hor">
+					<i class="pli-coin icon-3x"></i>
+				</div>
+			</div>
+			<div class="media-body">
+				<!-- <p class="text-2x mar-no text-semibold">{{infoParcelasReceber?.totalParcelas}}</p> -->
+				<p class="mar-no">Size Database</p>
+				<!-- <p class="text-1-4x mar-no text-semibold text-right">{{infoParcelasReceber?.valorTotalParcelas  | currency:'BRL'}}
+				</p> -->
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-danger panel-colorful media middle pad-all">
+			<div class="media-left">
+				<div class="pad-hor">
+					<i class="pli-basket-coins icon-3x"></i>
+				</div>
+			</div>
+			<div class="media-body">
+				<!-- <p class="text-2x mar-no text-semibold">{{infoParcelasPagar?.totalParcelas}}</p> -->
+				<p class="mar-no">Ultimo relatório</p>
+				<!-- <p class="text-1-4x mar-no text-semibold text-right">{{infoParcelasPagar?.valorTotalParcelas | currency:'BRL'}}
+				</p> -->
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel panel-purple panel-colorful media middle pad-all">
+			<div class="media-left">
+				<div class="pad-hor">
+					<i class="pli-consulting icon-3x"></i>
+				</div>
+			</div>
+			<div class="media-body">
+				<p class="text-2x mar-no text-semibold">Dúvidas</p>
+				<p class="mar-no">Liga pra gente.</p>
+				<!-- <p class="text-1-32x mar-no text-semibold "><span *ngFor="let info of infoContatoSagesc"> {{info.telefone}} </span></p> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row" *ngIf="!load">
+	<div class="col-md-3 ">
+		<div class="panel line-two">
+			<div class="panel-heading">
+				<h3 class="panel-title tituloGraficos">Top 5 Produtos mais vendidos no mês</h3>
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table">
+						<tbody>
+							<tr *ngFor="let produto of produtosMaisVendidosMes">
+								<!-- <td style="width: 80px;">{{produto.quantidade}} Un </td>
+								<td class="btn-link">{{produto.no_produto}} </td> -->
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<div class="panel line-two">
+			<perfect-scrollbar >
+				<div class="panel-heading">
+					<!-- <h3 class="panel-title tituloGraficos">Vendas nos últimos 4 anos (R$)</h3> -->
+				</div>
+				<div class="panel-body">
+					<div style="display: block;">
+						<!-- <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels"
+							[chartType]="pieChartType" 
+							[legend]="pieChartLegend"
+							[options]="pieChartOptions"
+							[colors]="pieChartColors"
+							[plugins]="pieChartPlugins" >
+						</canvas> -->
+					</div>
+				</div>
+			</perfect-scrollbar>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="panel line-two">
+			<perfect-scrollbar >
+				<div class="panel-heading">
+					<h3 class="panel-title tituloGraficos">Vendas do ano (R$)</h3>
+				</div>
+				<div class="panel-body">
+					<div style="display: block;">
+						<!-- <canvas baseChart [data]="barChartData" [labels]="barChartLabels"
+							[chartType]="barChartType"
+							[legend]="barChartLegend"
+							[options]="chartOptions"
+							[colors]="barChartColors"
+							[plugins]="chartPlugins" >
+						</canvas> -->
+					</div>
+				</div>
+			</perfect-scrollbar>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="panel line-two" >
+			<perfect-scrollbar >
+				<p class="pad-all text-main text-sm text-uppercase text-bold tituloAniversario">
+					Aniversariantes do mês
+				</p>
+				<div class="list-group bg-trans bord-btm " >
+					<!-- <div class="list-group-item list-item-sm" *ngFor="let aniversariante of aniversariantes" >
+						<div class="media-left pos-rel">
+							<a href="#" *ngIf="aniversariante?.tipo === 'fun'"><img class="img-circle img-xs"
+									src="{{rotaAnexosFuncionario}}{{aniversariante?.img?aniversariante?.img:'padrao.png'}}"
+									alt="Profile Picture"></a>
+							<a href="#" *ngIf="aniversariante?.tipo === 'cli'"><img class="img-circle img-xs"
+									src="{{rotaAnexosCliente}}{{aniversariante?.img?aniversariante?.img:'padrao.png'}}"
+									alt="Profile Picture"></a>
+						</div>
+						<div class="media-body">
+							<a href="#" class="text-main">
+								<p class="fontTelaPequena">{{aniversariante?.nome}}</p>
+							</a>
+							<span class="text-bold text-main text-sm fontTelaPequena" *ngIf="aniversariante?.data == data.getDate()">Hoje</span>
+							<span class="text-bold text-main text-sm fontTelaPequena" *ngIf="aniversariante?.data != data.getDate()">{{aniversariante?.data}} </span>
+							<button *ngIf="aniversariante?.tipo === 'fun'" class="btn btn-xs btn-default fontTelaPequena"><i class="pli-add-user"></i> Funcionário</button>
+							<button *ngIf="aniversariante?.tipo === 'cli'" class="btn btn-xs btn-default fontTelaPequena"><i class="pli-add-user"></i> Cliente</button>
+						</div>
+					</div> -->
+				</div>
+			</perfect-scrollbar>
+			</div>
+	</div>
+</div>
+<div class="row" *ngIf="!load">
+	<div class="col-md-4 ">
+		<div class="panel line-three">
+			<!-- <perfect-scrollbar >
+				<div class="panel-heading">
+					<h3 class="panel-title tituloGraficos">Despesas administrativas <small>(Venc próximos 7 dias)</small> </h3>
+				</div>
+				<div class="panel-body">
+					<div class="text-right">
+						<span><b>Total:</b> {{totalDespesasVence | currency:'BRL'}}</span>
+					</div>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr class="tituloTr">
+									<th>Valor</th>
+									<th>Dia Vencimento</th>
+									<th>Descrição</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let despesa of despesasVence">
+									<td>{{despesa?.vl_valor | currency:'BRL'}} </td>
+									<td class="text-center" *ngIf="despesa?.dia_vencimento == data.getDate()">Hoje</td>
+									<td class="text-center" *ngIf="despesa?.dia_vencimento != data.getDate()">{{despesa?.dia_vencimento}}</td>
+									<td class="btn-link">{{despesa.ds_despesas}} </td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</perfect-scrollbar> -->
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="panel line-three">
+			<!-- <perfect-scrollbar >
+				<div class="panel-heading">
+					<h3 class="panel-title tituloGraficos">Despesas fornecedores <small>(Venc próximos 7 dias)</small> </h3>
+				</div>
+				<div class="panel-body">
+					<div class="text-right">
+						<span><b>Total:</b> {{totalParcelasFornecedor | currency:'BRL'}}</span>
+					</div>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr class="tituloTr">
+									<th>Valor</th>
+									<th>Dia Vencimento</th>
+									<th>Fornecedor</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr *ngFor="let parcela of parcelaFornecedor">
+									<td>{{parcela?.vl_parcela | currency:'BRL'}}</td>
+									<td class="text-center" *ngIf="parcela?.dia_vencimento == data.getDate()">Hoje</td>
+									<td class="text-center" *ngIf="parcela?.dia_vencimento != data.getDate()">{{parcela?.dia_vencimento}}</td>
+									<td class="btn-link">{{parcela?.nome_razao_social}}</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</perfect-scrollbar> -->
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="panel line-three">
+			<!-- <perfect-scrollbar >
+				<div class="panel-heading">
+					<h3 class="panel-title tituloGraficos">Parcelas a receber <small>(No mês)</small> </h3>
+				</div>
+				<div class="panel-body">
+					<div class="text-right">
+						<span><b>Total:</b> {{totalParcelasReceber | currency:'BRL'}}</span>
+					</div>
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr class="tituloTr">
+									<th>Valor</th>
+									<th>Dia Vencimento</th>
+									<th>Cliente</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								
+								<tr *ngFor="let parcela of parcelaCliente" [class]="parcela?.dia < data.getDate()?'text-danger vencido cursor-pointer':' cursor-pointer'" [routerLink]="['/clientes/compras',parcela?.id_cliente]" >
+									<td>{{parcela?.vl_parcela | currency:'BRL'}}</td>
+									<td class="text-center" *ngIf="parcela?.dia == data.getDate()">Hoje</td>
+									<td class="text-center" *ngIf="parcela?.dia != data.getDate()">{{parcela?.dia}}
+										<small *ngIf="parcela?.dia < data.getDate()">(vencida)</small>
+									</td>
+									<td class="">{{parcela?.nome_razao_social}}</td>
+								</tr>
+								
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</perfect-scrollbar> -->
+		</div>
+	</div>
+</div>
+
+<!-- LOADING -->
+<div class="row" *ngIf="load" >
+	<div class="col-md-3 piscando_div">
+		<div class="panel panel-info  media middle pad-all"  style="height: 100px;">
+		</div>
+	</div>
+	<div class="col-md-3 piscando_div">
+		<div class="panel panel-mint media middle pad-all"  style="height: 100px;">
+		</div>
+	</div>
+	<div class="col-md-3 piscando_div">
+		<div class="panel panel-danger media middle pad-all"  style="height: 100px;">
+		</div>
+	</div>
+	<div class="col-md-3 piscando_div">
+		<div class="panel panel-purple media middle pad-all" style="height: 100px;">
+		</div>
+	</div>
+</div>
+<div class="row" *ngIf="load">
+	<div class="col-md-3 piscando_div">
+		<div class="panel line-two">
+		</div>
+	</div>
+	<div class="col-md-3 piscando_div">
+		<div class="panel line-two">
+			
+		</div>
+	</div>
+	<div class="col-md-4 piscando_div">
+		<div class="panel line-two">
+		</div>
+	</div>
+	<div class="col-md-2 piscando_div">
+		<div class="panel line-two" >
+		</div>
+	</div>
+</div>
+<div class="row" *ngIf="load">
+	<div class="col-md-4 piscando_div">
+		<div class="panel line-three">
+		</div>
+	</div>
+	<div class="col-md-4 piscando_div">
+		<div class="panel line-three">
+		</div>
+	</div>
+	<div class="col-md-4 piscando_div">
+		<div class="panel line-three">
+		</div>
+	</div>
+</div>

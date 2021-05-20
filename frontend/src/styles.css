@@ -1,0 +1,264 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';
+
+.cdk-overlay-container {
+    z-index: 99999 !important;
+}
+.overflow-auto{overflow-y: auto;overflow-x: hidden}
+/* layout */
+.new-section-sm {
+	margin: 5px 0 !important;
+}
+
+.dragpreview{
+	padding: 12px;
+}
+
+.iconsListOptions {
+	font-size: 1.2em;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.uploadArquivoProduto {
+	width: 100%;
+	height: 200px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.uploadArquivo {
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+.uploadAnexo {
+	margin: auto!important;
+	width: 50px;
+	height: 50px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.uploadArquivoCapa {
+	width: 100%;
+	height: 200px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.widget-bg,
+.widget-img {
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-position: center;
+}
+
+.sizestar {
+	font-size: 2em;
+	margin-left: 5px;
+}
+
+.starCada {
+	margin-top: -5px;
+	font-size: 0.8em;
+}
+
+.marginTopNegativo5 {
+	margin-top: -5px;
+}
+
+.dot {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	display: inline-block;
+	background: #00bf00;
+    /* box-shadow: 0px 2px 4px #00bf00, 0 0 1px 5px #00bf00, 0 0 2px 10px #00bf00; */
+    
+    position: absolute;
+    /* right: none; */
+    top: 0;
+    margin: 4px 7px 0 -18px !important;
+    box-shadow: 0 0 0 2px white;
+}
+@keyframes piscando {
+    0% { opacity: 1; }
+    75% { opacity: 0.75; }
+    60% { opacity: 0.6; }
+}
+.piscando{
+    -webkit-animation: piscando 1s linear infinite;
+    -moz-animation: piscando 1s linear infinite;
+    -ms-animation: piscando 1s linear infinite;
+    -o-animation: piscando 1s linear infinite;
+    animation: piscando 1s linear infinite;
+}
+
+.positonTopRight {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.positonBottomRight {
+	position: absolute;
+	right: 0;
+    bottom: 0;
+}
+/* .close {
+	margin-right: 22px;
+	font-size: 1.5em;
+	margin-top: 10px;
+} */
+
+[hidden] { display: none; }
+
+.cursor-pointer{cursor: pointer;}
+
+.fontTitleCardapio{
+	color: var(--primary) !important;
+	font-weight: bold;
+}
+.fontTitle{
+	color: var(--primary) !important;
+}
+.example-button {
+    margin-top: 16px;
+}
+  
+.example-tooltip-red {
+	background: #b71c1c;
+}
+  
+/* drag and drop angular material */
+
+.cdk-drag-preview {
+	box-sizing: border-box;
+	border-radius: 4px;
+	box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+				0 8px 10px 1px rgba(0, 0, 0, 0.14),
+				0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+.cdk-drag-placeholder {
+	opacity: 0;
+}
+
+.cdk-drag-animating {
+	transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-box:last-child {
+	border: none;
+}
+
+.example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+	transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.float-right{
+	float: right!important;
+} 
+
+/* drag and drop angular material */
+
+.input-update{
+    border: none;
+    background-color:transparent;
+}
+.input-update:hover {
+    text-decoration: none;
+    border-bottom: dashed 1px #0088cc;
+}
+
+.deleteFk{
+	font-size: 2em;
+	margin-top: 26px;
+}
+.card-global {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+.card-1 {
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+.panel-bordered-grey{border: 1px solid #ecf0f5;}
+
+.labelOperacoesAdicao, .labelOperacoesSubtracao, .labelOperacoesIgual{font-size: 1em}
+.labelOperacoesAdicao{ color: #16835e}
+.labelOperacoesSubtracao{ color: #e34c45 }
+.labelOperacoesIgual{ color: #252322 }
+.obrigatorio{color: #e34c45!important;font-size: 0.5em!important;}
+
+
+
+/* LOADER PARA PISCAR OS TD DAS LISTAGEM */
+
+@keyframes piscando {
+    0% { opacity: 1; }
+    /* 90% { opacity: 0.90; } */
+    /* 70% { opacity: 0.70; } */
+    60% { opacity: 0.60; }
+    /* 50% { opacity: 0.50; } */
+    40% { opacity: 0.40; }
+}
+.piscando_tr {
+    -webkit-animation: piscando 1s linear infinite;
+    -moz-animation: piscando 1s linear infinite;
+    -ms-animation: piscando 1s linear infinite;
+    -o-animation: piscando 1s linear infinite;
+    animation: piscando 1s linear infinite;
+    background-color: rgb(245, 240, 240);
+    height: 25px !important;
+    width: 100% !important;
+    /* opacity: 0.9 !important; */
+}
+.piscando_div {
+    -webkit-animation: piscando 1s linear infinite;
+    -moz-animation: piscando 1s linear infinite;
+    -ms-animation: piscando 1s linear infinite;
+    -o-animation: piscando 1s linear infinite;
+    animation: piscando 1s linear infinite;
+    /* background-color: rgb(245, 240, 240); */
+    /* opacity: 0.9 !important; */
+}

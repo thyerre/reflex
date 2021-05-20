@@ -1,0 +1,37 @@
+<div class="intro">
+	<div class="container-left">
+		<img src="./../../../assets/img/system/laravel-logo.png" width="250" alt="">
+		<img src="./../../../assets/img/system/angular-logo.svg" width="200" alt="">
+		<img src="./../../../assets/img/system/php-logo.svg" width="190" alt="">
+	</div>
+	<div class="container-rigth">
+		<img src="./../../../assets/img/system/mysql-logo.jpg" width="200" alt="">
+		<img src="./../../../assets/img/system/postgresql-logo.png" width="230" alt="">
+		<img src="./../../../assets/img/system/oracle-logo.png" width="200" alt="">
+	</div>
+	<div class="cls-content ">
+		<div class="cls-content-sm panel">
+			<img class="img-logo" src="./../../../assets/img/system/horse-logo-login.svg" width="70">
+			<div class="panel-body">
+				<div class="mar-ver pad-btm">
+					<h1 class="h3">REFLEX | Login</h1>
+					<p>Entre na sua conta</p>
+				</div>
+				<form [formGroup]="loginForm" class="card">
+					<app-input-container [showTip]="false">
+						<input type="text" formControlName="login" class="form-control" placeholder="Username" autofocus>
+						<span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+					</app-input-container>
+	
+					<app-input-container [showTip]="false">
+						<input type="password" formControlName="password" class="form-control" placeholder="Password">
+						<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+					</app-input-container>
+					
+					<button (click)="login()" class="btn btn-primary btn-lg btn-block" [disabled]="loginForm.invalid">Entrar</button>
+		  		</form>
+			</div>
+		</div>
+	</div>
+</div>
+
